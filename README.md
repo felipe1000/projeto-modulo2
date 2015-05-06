@@ -1,2 +1,2 @@
 # projeto-modulo2
-Criação de site me php, módulo 2.
+Criação de site em php, módulo 2.
