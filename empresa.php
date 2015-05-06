@@ -21,7 +21,7 @@
 
 		  <div class="span9">
 
-		  	<?php include_once("home.html"); ?>
+		  	<?php include_once("empresa.html"); ?>
 		  	
 		  </div>
 
