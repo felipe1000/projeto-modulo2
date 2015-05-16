@@ -1,34 +1,23 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="UTF-8">
-	<meta name="description" content="Projeto- fase 1 - módulo2"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Projeto- fase 2 - módulo2</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.css">
-	<link rel="stylesheet" href="estilo.css">
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-</head>
-<body>
+<?php
 
-	<?php include_once("header.php"); ?>
-	
-	<div class="container">
-		<div class="row">
-			
-		<?php include_once("menu.php"); ?>
+$rota=parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+$pagina= str_replace("projeto-modulo2/", "", $rota['path']);
+$path = explode('/',$pagina,2);
 
-		  <div class="span9">
+function rota($path){
 
-		  	<?php include_once("home.html"); ?>
-		  	
-		  </div>
+	$rotas = array ( "home","empresa","contato","servicos" );
+	if (in_array($path[1], $rotas)) {
+		return require_once($path[1].".php");
+	} else if ( $path[1] == ""){
+		return require_once("home.php");
+	} else {
+		header("HTTP/1.0 404 Not Found");
+		include_once ("erro.php");die;
+	}
 
-	    </div>
-    </div>
-    
-    <?php include_once("footer.php"); ?>
+}
 
-</body>
-</html>
+rota($path);
+
+?>
