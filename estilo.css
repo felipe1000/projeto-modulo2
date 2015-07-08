@@ -381,3 +381,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     width: auto;
     top: 0;
   }
+.botao_fixture {
+    margin: 45px 0 -50px 70px;
+}

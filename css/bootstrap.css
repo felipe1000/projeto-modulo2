@@ -6195,3 +6195,6 @@ a.badge:hover {
 .affix {
   position: fixed;
 }
+.botao_fixture {
+    margin: 45px 0 -50px 70px;
+}

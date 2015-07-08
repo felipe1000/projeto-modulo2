@@ -21,11 +21,26 @@
 
 		  <div class="span9">
 
-		  	<?php include_once("home.html"); ?>
+		  	<?php 
+
+             
+
+               require_once "conexaoDB.php";
+
+               $conn= conexaoDB();
+               $pagina="home";
+               $sql = "SELECT conteudo FROM conteudos WHERE pagina=:pagina";
+               $stmt = $conn->prepare($sql);
+               $stmt->bindValue("pagina",$pagina);
+               $stmt->execute();
+               $clientes = $stmt->fetch(PDO::FETCH_OBJ);
+
+                echo $clientes->conteudo;
+            ?>
 		  	
 		  </div>
-
 	    </div>
+        <div class="botao_fixture"><a href="fixture.php" class="btn btn-primary">Executar Fixture</a></div>
     </div>
     
     <?php include_once("footer.php"); ?>
