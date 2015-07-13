@@ -6198,3 +6198,8 @@ a.badge:hover {
 .botao_fixture {
     margin: 45px 0 -50px 70px;
 }
+.pesquisa {
+    float: left;
+    margin-left: 85px;
+    width: 300px;
+}

@@ -57,7 +57,7 @@
 		  	
 		  </div>
 	    </div>
-        <div class="botao_fixture"><a href="fixture.php" class="btn btn-primary">Fixture</a></div>
+        <div class="botao_fixture"><a href="home.php" class="btn btn-primary">Home</a></div>
     </div>
     
     <?php include_once("footer.php"); ?>
