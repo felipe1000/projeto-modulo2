@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,14 +31,19 @@
                require_once "conexaoDB.php";
 
                $conn= conexaoDB();
-               $palavra= $_POST['palavra'];
+               if (isset($_POST['palavra'])){
+                   
+                   $palavra= $_POST['palavra'];
+               }else{
+                   $palavra='';
+               }
                $consulta= "%".$palavra."%";
                $sql= "SELECT `pagina` FROM `conteudos` WHERE `conteudo` LIKE '$consulta'";
                $stmt = $conn->prepare($sql);
                $stmt->bindValue("palavra",$palavra);
                $stmt->execute();
                
-               if($stmt->rowCount() == 0){
+               if($stmt->rowCount() == 0 or $palavra== ''){
                    
                    echo "Nenhum resultado encontrado para <strong>$palavra</strong> !";
                

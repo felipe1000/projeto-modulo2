@@ -1005,7 +1005,8 @@ pre code {
 }
 
 form {
-  margin: 0 0 20px;
+    color: #fff;
+    margin: 0 0 0 20px;
 }
 
 fieldset {
@@ -3523,6 +3524,7 @@ input[type="submit"].btn.btn-mini {
   color: #0088cc;
   cursor: pointer;
   border-color: transparent;
+  margin: 0 0 -6px -30px;
   -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;
@@ -4469,11 +4471,11 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar .nav {
-  position: relative;
-  left: 0;
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
+    display: block;
+    float: right;
+    left: 0;
+    margin: 5px 10px 5px 0;
+    position: relative;
 }
 
 .navbar .nav.pull-right {
@@ -4483,6 +4485,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .nav > li {
   float: left;
+  color: #fff;
 }
 
 .navbar .nav > li > a {
@@ -6196,7 +6199,11 @@ a.badge:hover {
   position: fixed;
 }
 .botao_fixture {
+    border: 1px solid #f5f5f5;
+    border-radius: 7px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
     margin: 45px 0 -50px 70px;
+    padding: 10px;
 }
 .pesquisa {
     float: left;

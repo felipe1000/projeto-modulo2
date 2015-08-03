@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -40,7 +43,7 @@
 		  	
 		  </div>
 	    </div>
-        <div class="botao_fixture"><a href="fixture.php" class="btn btn-primary">Executar Fixture</a></div>
+        <?php include_once("fixture.php"); ?>
     </div>
     
     <?php include_once("footer.php"); ?>
